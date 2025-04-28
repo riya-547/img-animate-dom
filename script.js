@@ -1,13 +1,13 @@
-var elem1 = document.querySelector("#elem1")
-var img = document.querySelector("#elem1 img")
+var elem = document.querySelectorAll(".elem")
 
-elem1.addEventListener("mousemove", function(dets) {
-    img.style.opacity = 1
-img.style.left = dets.x + "px"
-img.style.top = dets.y + "px"
-
-   } )
-   elem1.addEventListener("mouseleave", function(dets) {
-
-    img.style.opacity = 0
-   })
+elem.forEach(function (e){
+    e.addEventListener("mousemove", function(dets){
+       e.childNodes[3].style.left = dets.x+"px"
+    })
+    e.addEventListener("mouseenter", function(){
+        e.childNodes[3].style.opacity = 1
+     })
+     e.addEventListener("mouseleave", function(){
+        e.childNodes[3].style.opacity = 0
+     })
+})

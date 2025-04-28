@@ -21,6 +21,14 @@ width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    position: relative;
+    
+}
+h1{
+    cursor: none;
+    mix-blend-mode: difference;
+    position: relative;
+    z-index: 9;
     
 }
 
@@ -32,4 +40,8 @@ width: 100%;
     object-position: center;
     position: absolute;
     opacity: 0;
+    transition: all linear 0.1s;
+
+
+    
 }
